@@ -15,7 +15,7 @@ data Tree a
 findValue :: (Eq a) => a -> Tree a -> Maybe a
 findValue _ Empty = Nothing
 findValue x (Node a left right)
-  | a == x = Just a
-  | findValue a left /= Nothing = findValue a left
-  | findValue a right /= Nothing = findValue a right
-  | otherwise = Nothing
+  | x == a = Just a
+  | otherwise = case findValue x left of
+      Just val -> Just val
+      Nothing -> findValue x right
