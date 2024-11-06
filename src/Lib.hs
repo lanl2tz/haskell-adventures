@@ -4,10 +4,10 @@ module Lib
   )
 where
 
-import Graph.Tree (Tree (..), findValue)
+import Graph.Tree (Tree (..), findValue, printTree, sortTree)
 
 someFunc :: IO ()
 someFunc = putStrLn "Wellcom to lanl2tz's library!"
 
 testTree :: IO ()
-testTree = print $ findValue 2 (Node 1 (Node 2 Empty Empty) Empty)
+testTree = printTree $ sortTree [5, 4, 6, 4, 3, 1, 8, 9, 6, 5, 3, 7, 6, 3, 4, 9, 1]
