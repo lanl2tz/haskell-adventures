@@ -1,7 +1,8 @@
 module Main (main) where
 
 import Lib
-import Graph.Tree
+
+-- import Graph.Tree
 
 main :: IO ()
-main = someFunc
+main = testTree
